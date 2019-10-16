@@ -14,9 +14,6 @@ RUN apt-get update && \
       curl \
       gnupg2 \
       software-properties-common && \
-    curl -sS https://getcomposer.org/installer | php && \
-    mv composer.phar /usr/local/bin/composer && \
-    chmod +x /usr/local/bin/composer && \
     curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
     apt-key fingerprint 0EBFCD88 && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" && \
