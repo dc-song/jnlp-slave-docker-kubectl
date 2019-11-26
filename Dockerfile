@@ -27,9 +27,10 @@ RUN apt-get update && \
     chmod +x ./kubectl && \
     mv ./kubectl /usr/local/bin/kubectl && \
     apt-get update && \
-    apt-get install -y php7.0 && \
+    apt-get install -y php7.0 maven && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
     chmod +x /usr/local/bin/composer && \
     apt-get clean
     
+COPY ./ssh/ /root/.ssh/
